@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/detail_bottom_bg" >
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="5dp"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <FrameLayout
+                android:id="@+id/detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_bg_normal" />
+
+            <FrameLayout
+                android:id="@+id/detail_safe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_info"
+                android:background="@drawable/list_item_bg_normal" />
+
+            <HorizontalScrollView
+                android:layout_marginTop="5dp"
+                android:id="@+id/detail_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_safe"
+                android:fillViewport="true"
+                android:scrollbars="none" />
+
+            <FrameLayout
+                android:id="@+id/detail_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_screen"
+                android:background="@drawable/list_item_bg_normal" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
